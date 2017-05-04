@@ -1,0 +1,484 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+
+
+    <style>
+        body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, img, div, dl, dt, dd, input, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        body {
+            font-family: '微软雅黑', '\5B8B\4F53', Verdana;
+        }
+
+        ul, ol {
+            list-style-type: none;
+        }
+
+        select, input, img {
+            vertical-align: middle;
+            outline: none;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        a {
+            blr: expression(this.onFocus=this.blur())
+        }
+
+        a {
+            outline: none;
+        }
+
+        html {
+            overflow-x: hidden;
+        }
+
+        .clearfix:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .clearfix {
+            zoom: 1;
+        }
+
+        .fl {
+            float: left;
+        }
+
+        .fr {
+            float: right;
+        }
+
+    
+    </style>
+
+    <style>
+
+    html{
+        font-size:32px;
+    }
+    body{
+         max-width:750px;
+        margin:0 auto;
+    }
+        /*header*/
+        header {
+            width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+            background: url(img/header_bg.png) no-repeat;
+        }
+
+        header .logo {
+            /*宽度高度根据公司logo调整 限定在80*80*/
+            width: 0.9375rem;
+            height: 0.8125rem;
+            background: url(img/logo.png) no-repeat;
+            background-size:100% 100%;
+            margin-left: 0.25rem;
+            text-indent: -1000em;
+        }
+
+        header p {
+            width: 8.625rem;
+            font: 0.5rem/0.8125rem '微软雅黑';
+            text-align: center;
+            color: red;
+        }
+
+        /*tab*/
+        #tab {
+            width: 100%;
+            height:4rem;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #tab ul {
+            width: 3200000px;
+            height: 4rem;
+            overflow-x:auto;
+            background: #666;
+            position:absolute;
+            left:0; 
+            top:0;
+        }
+
+        #tab ul li {
+            width: 10rem;
+            height: 4rem;
+            background: #ccc;
+            float: left;
+        }
+
+        #tab img {
+            width: 100%;
+            height: 100%;
+        }
+
+        #tab span{
+            width:1.3125rem;
+            height:0.625rem;
+            font:bold 0.9375rem "微软雅黑";
+            text-align:center;
+            line-height:0.625rem;
+            position:absolute;
+            color:#fff;
+            opacity:0.6;
+            border-radius:0.125rem;
+            z-index:3;
+            display:none;
+        }
+        #tab span.s1{
+            left:0.375rem;
+            top:1.625rem;
+        }
+        #tab span.s2{
+            right:0.375rem;
+            top:1.625rem;
+        }
+
+
+/*#main css*/
+#main{
+    width:100%; 
+    margin:0 auto;
+}
+/*#left css */
+#left{
+    width:2rem; height:9.3125rem;
+    background:#eaea76;
+}
+#left h4{
+    font-size:0.4375rem;
+    text-align:center;
+}
+#left p{
+    font-size:0.375rem;
+    text-indent:2em;
+}
+
+
+
+
+/*#right css*/
+#right{
+    width:8rem; height:9.3125rem;
+    background:#ccc;
+}
+#right ul li{
+    width:100%; 
+    font-size:0.375rem;
+    text-align:center;
+    border-bottom:1px solid red;
+    position:relative;
+}
+#right li em{
+    display:block;
+    width:100%; height:0.5625rem;
+    line-height:0.5625rem;
+}
+#right li span{
+    width:0.375rem; height:0.375rem;
+    position:absolute; 
+    top:0.1rem; right:0.125rem;
+    background:url(img/+.png) no-repeat;
+    background-size:100% 100%;
+}
+#right li span.current{
+    background:url(img/-.png) no-repeat;
+    background-size:100% 100%;
+}
+
+#right li div{
+    width:100%; height:4rem;
+    background:#999;
+    display:none;
+}
+#right li div.current{
+    display:block;
+}
+
+#right div img{
+    width:4rem; height:2.66rem;background:#fff;
+}
+
+footer{
+    width:100%; 
+    margin:0 auto;
+}
+footer .top{
+    width:100%; background:#888;
+    font-size:0.375rem;
+}
+footer .top .adress{
+    width:50%; height:1.125rem;
+}
+footer .top a{
+    width:50%;
+    height:1.125rem;
+    background:green;
+    position:relative;
+}
+footer .top a span{
+    position:absolute;
+     top:0.25rem; left:0.25rem;
+}
+footer .top .link img{
+    height:0.625rem;
+    margin:0.25rem auto;
+}
+
+
+
+    </style>
+
+</head>
+
+<body>
+<!-- header start -->
+<header class="clearfix">
+    <h1 class="logo fl">公司名字</h1>
+    <p class="fl">XXX 欢迎您的到来！！！</p>
+</header>
+
+<!-- 轮播图 -->
+<div id="tab">
+    <span class="s1"><--</span>
+    <span class="s2">--></span>
+    <ul class="clearfix">
+        <li><img src="img/banner1.png" alt=""></li>
+        <li><img src="img/banner2.png" alt=""></li>
+        <li><img src="img/banner3.png" alt=""></li>
+
+        <li><img src="img/banner1.png" alt=""></li>
+        <li><img src="img/banner2.png" alt=""></li>
+        <li><img src="img/banner3.png" alt=""></li>
+    </ul>
+
+</div>
+
+<!-- 主体部分 -->
+<div id="main" class="clearfix">
+<!-- 左侧导航 -->
+    <div id="left" class="fl">
+        <h4>公司介绍</h4>
+        <p>公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍</p>
+       <!--  <p class="phone">联系电话</p>
+        <p class="phone">139xxxx5555</p>
+        <p class="qq">企鹅号</p>
+        <p class="phone">666666666</p>
+        <p class="wx">微信号</p>
+        <p class="phone">666666666</p>
+        <img src="" alt="微信二维码"> -->
+
+
+    </div>
+<!-- 右侧产品展示 -->
+    <div id="right" class="fr">
+        <ul>
+            <li>
+            <em>产品名称1</em><span class="current"></span>
+            <div class="current">
+                <img src="" alt="引入图片">
+                <p>图片文字说明</p>
+            </div>
+            </li>
+            <li>
+            <em>产品名称2</em><span></span>
+            <div>
+                <img src="" alt="引入图片">
+                <p>图片文字说明</p>
+            </div>
+            </li>
+            <li>
+            <em>产品名称3</em><span></span>
+            <div>
+                <img src="" alt="引入图片">
+                <p>图片文字说明</p>
+            </div>
+            </li>
+            <li>
+            <em>产品名称4</em><span></span>
+            <div>
+                <img src="" alt="引入图片">
+                <p>图片文字说明</p>
+            </div>
+            </li>
+            <li>
+            <em>产品名称5</em><span></span>
+            <div>
+                <img src="" alt="引入图片">
+                <p>图片文字说明</p>
+            </div>
+            </li>
+            <li>
+            <em>产品名称6</em><span></span>
+            <div>
+                <img src="" alt="引入图片">
+                <p>图片文字说明</p>
+            </div>
+            </li>
+            <li>
+            <em>产品名称7</em><span></span>
+            <div>
+                <img src="" alt="引入图片">
+                <p>图片文字说明</p>
+            </div>
+            </li>
+            <li>
+            <em>产品名称8</em><span></span>
+            <div>
+                <img src="" alt="引入图片">
+                <p>图片文字说明</p>
+            </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<footer>
+    <div class="clearfix top">
+        <div class="adress fl">
+            <h4>公司地址</h4>
+            <p>某市某县某区某某街xxx号</p>
+        </div>
+        <a href="tel:139xxxx5555" class='fl'>
+            <div class="link"><span>电话咨询</span><img src="img/phone.gif" alt="png"></div>
+        </a>
+        
+    </div>
+
+    <div class="copyRight">
+        
+    </div>
+
+    
+</footer>
+
+
+
+
+
+
+
+<!-- hammer -->
+<script src="js/hammer-2.0.8.js"></script>
+<script src="js/move.js"></script>
+
+
+<script>
+
+
+// rem
+window.onresize=function(){
+    document.documentElement.style.fontSize=32/320*document.documentElement.clientWidth+'px';
+}
+window.onresize();
+
+
+//rem
+    //无缝轮播图
+    var oUl = document.querySelector('#tab ul');
+    var aLi=oUl.children;
+    var oUlHam = new Hammer(oUl);
+    var index=0;
+
+    
+    //无缝滚动轮播图
+    oUlHam.on('swipeleft', function (ev) {
+       
+        if(index==5){
+            index=2;
+            oUl.style.left=-index*aLi[0].offsetWidth+'px';
+        }
+        index++;
+        index%=6;
+        move(oUl,{left:-index*aLi[0].offsetWidth},{time:1000});
+
+    })
+
+
+    oUlHam.on('swiperight', function (ev) {
+       
+        if(index==0){
+            index=3;
+            oUl.style.left=-index*aLi[0].offsetWidth+'px';
+        }
+
+        index--;
+        index%=6;
+        move(oUl,{left:-index*aLi[0].offsetWidth},{time:1000});
+
+   })
+
+
+
+    oUlHam.on('tap',function(){
+        var aS=document.querySelectorAll('#tab span');
+        for(var i=0; i<aS.length; i++){
+            aS[i].style.display='block';
+        };
+
+        setTimeout(function(){
+            for(var i=0; i<aS.length; i++){
+                aS[i].style.display='none';
+            }
+        },3000)
+    })
+
+
+   
+
+
+
+var aLiRight=document.querySelectorAll('#right ul li');
+var aDivRight=document.querySelectorAll('#right li div');
+var aSpanRight=document.querySelectorAll('#right li span');
+
+for(var i=0; i<aLiRight.length; i++){
+    aLiRight[i].index=i;
+    aLiRight[i].addEventListener('touchend',function(){
+        for(var i=0; i<aLiRight.length; i++){
+            aDivRight[i].className='';
+            aSpanRight[i].className='';
+        }
+        aDivRight[this.index].className='current';
+        aSpanRight[this.index].className='current';
+    },false)
+}
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
